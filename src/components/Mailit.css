@@ -1,0 +1,109 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url("../assets/img/banner-bg.png");
+}
+.contact-container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100vw;
+}
+.contact-left{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+
+}
+.contact-inputs{
+    width: 90vw;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: lightcyan;
+}
+.contact-container button{
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 16px;
+    color: white;
+    gap: 10px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(270deg,#ff994f,#fa6d86);
+}
+.contact-left-title h2 {
+    font-size: 2em;
+    background: linear-gradient(90deg, #d4af37, #ffd700, #b8860b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.5), 0 0 10px rgba(255, 223, 0, 0.3);
+    animation: shine 2s infinite;
+  }
+  
+  .contact-left-title hr {
+    border: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ffd700, transparent);
+    animation: slide 2s linear infinite;
+  }
+  
+  @keyframes shine {
+    0% {
+      text-shadow: 0 0 5px rgba(255, 215, 0, 0.5), 0 0 10px rgba(255, 223, 0, 0.3);
+    }
+    50% {
+      text-shadow: 0 0 10px rgba(255, 215, 0, 0.5), 0 0 20px rgba(255, 223, 0, 0.3);
+    }
+    100% {
+      text-shadow: 0 0 5px rgba(255, 215, 0, 0.5), 0 0 10px rgba(255, 223, 0, 0.3);
+    }
+  }
+  .contact-inputs {
+    width: 50vw;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(145deg, #af37d4, #ff00bf, #b8860b);
+    color: #fff;
+    font-size: 1em;
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.5), 0 0 10px rgba(255, 223, 0, 0.3);
+    box-shadow: 0 0 5px rgba(255, 215, 0, 0.5), 0 0 15px rgba(255, 223, 0, 0.3);
+    outline: none;
+    transition: background 0.3s, box-shadow 0.3s;
+  }
+  
+  .contact-inputs::placeholder {
+    color: #fff;
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.5), 0 0 10px rgba(255, 223, 0, 0.3);
+  }
+  
+  .contact-inputs:focus {
+    background: linear-gradient(145deg, #ffd700, #d4af37, #b8860b);
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.7), 0 0 20px rgba(255, 223, 0, 0.5);
+  }
+  
+  
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+@media (max-width:800px) {
+    .contact-inputs{
+        width: 80vw;
+    }
+}

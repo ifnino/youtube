@@ -1,0 +1,49 @@
+/* NavBar.css */
+
+/* Metallic text effect */
+.metallic-text {
+    background: linear-gradient(90deg, #FFD700, #DAA520);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Metallic horizontal rule */
+.metallic-hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, #FFD700, #DAA520);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    animation: float 2s infinite ease-in-out;
+}
+
+/* Floating animation */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Adjustments for NavBar */
+.navbar-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.vvd span {
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+}
+
+.vvd:hover span {
+    transform: translateY(-5px);
+}
