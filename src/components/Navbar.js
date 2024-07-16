@@ -45,7 +45,7 @@ export const NavBar = () => {
                             onClick={() => onUpdateActiveLink('home')}
                         >
                             Home
-                            <hr className="metallic-hr" />
+                            <hr className="metallic-hr" ></hr>
                         </Nav.Link>
                         <Nav.Link 
                             href="#skills" 
