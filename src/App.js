@@ -8,33 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Mailit } from './components/Mailit';
 
 function App() {
-  useEffect(() => {
-    const sections = document.querySelectorAll('section');
-    const options = {
-      threshold: 0.5, // Adjust this value to tweak when the observer should trigger
-    };
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        } else {
-          entry.target.classList.remove('visible');
-          entry.target.classList.add('past');
-        }
-      });
-    }, options);
-
-    sections.forEach((section) => {
-      observer.observe(section);
-    });
-
-    return () => {
-      sections.forEach((section) => {
-        observer.unobserve(section);
-      });
-    };
-  }, []);
 
   return (
     <div className="App">
